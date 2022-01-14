@@ -18,17 +18,16 @@ python3 -m venv .venv
 python3 -m pip install --upgrade pip
 ```
 
+## Requirements
+
+```shell
+pip install Elasticsearch
+```
 
 ## Run project
 
 ```shell
 python src/main.py
-```
-
-## Requirements
-
-```shell
-pip install Elasticsearch
 ```
 
 ## References
