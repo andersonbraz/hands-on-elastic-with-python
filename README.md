@@ -18,6 +18,13 @@ python3 -m venv .venv
 python3 -m pip install --upgrade pip
 ```
 
+
+## Run project
+
+```shell
+python src/main.py
+```
+
 ## Requirements
 
 ```shell
@@ -26,3 +33,8 @@ pip install Elasticsearch
 
 ## References
 
+[Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current)
+
+[Guide How To Add Documents To An Index In Elasticsearch](https://kb.objectrocket.com/elasticsearch/guide-how-to-add-documents-to-an-index-in-elasticsearch)
+
+[Python Elasticsearch Client](https://elasticsearch-py.readthedocs.io/en/v7.16.3/)
