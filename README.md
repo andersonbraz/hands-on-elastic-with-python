@@ -33,6 +33,7 @@ python3 -m pip install --upgrade pip
 
 ```shell
 pip install Elasticsearch
+pip install Faker
 ```
 
 ## Run project
