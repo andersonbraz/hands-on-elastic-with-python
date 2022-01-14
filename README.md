@@ -1,6 +1,17 @@
 # HandsOn Kafka with Elastic
 
 
+## Clone project
+
+```shell
+git clone https://github.com/andersonbraz/hands-on-elastic-with-python.git
+```
+## Open project
+
+```shell
+code hands-on-elastic-with-python
+```
+
 ## Create Enviroment Pynton
 
 ```shell
