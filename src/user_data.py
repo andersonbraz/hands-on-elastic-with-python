@@ -1,11 +1,15 @@
 from faker import Faker
+from datetime import datetime
 
 fake = Faker("pt_BR")
 
 
 def get_user():
 
+    timestamp = datetime.now()
+
     return {
+        "created_at": timestamp.strftime("%Y-%m-%d %H:%M"),
         "name": fake.name(),
         "address": fake.address(),
         "postcode": fake.postcode(),
