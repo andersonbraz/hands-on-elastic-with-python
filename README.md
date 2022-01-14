@@ -1,4 +1,4 @@
-# HandsOn Kafka with Elastic
+# HandsOn Elastic with Python
 
 
 ## Clone project
