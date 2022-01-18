@@ -53,3 +53,22 @@ python src/main.py
 ## Utils
 
 [Download Insomnia](https://insomnia.res/download)
+
+## Install Connector Elastic Source
+
+
+```shell
+confluent-hub install dariobalinzo/kafka-connect-elasticsearch-source:1.5.0
+```
+
+## Setting Connector Elastic Source
+
+```shell
+curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es_","incrementing.field.name":"@timestamp"}}' http://localhost:8083/connectors
+```
+
+## Check 
+
+```shell
+curl http://127.0.0.1:8083/connectors/elastic-source/status
+```
