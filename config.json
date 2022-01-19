@@ -1,0 +1,38 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 5,
+            "number_of_replicas": 1
+        }
+    },
+    "mapping": {
+        "properties": {
+            "timestamp": {
+                "type": "date",
+                "format": ""
+            },
+            "id": {
+                "type": "keyword"
+            },
+            "created_at": {
+                "type": "date",
+                "format": "YYYY-MM-DD HH:mm"
+            },
+            "name": {
+                "type": "text"
+            },
+            "address": {
+                "type": "text"
+            },
+            "postcode": {
+                "type": "text"
+            },
+            "phone_number": {
+                "type": "text"
+            },
+            "ssn": {
+                "type": "text"
+            }
+        }
+    }
+}
