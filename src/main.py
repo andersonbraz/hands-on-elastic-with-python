@@ -30,6 +30,7 @@ def execute_sender():
 
     res = es.index(index="inter-sample", id=offset, document=doc)
     print(res["result"])
+    print(doc)
 
 
 if __name__ == "__main__":

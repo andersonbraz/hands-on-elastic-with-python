@@ -1,0 +1,90 @@
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "5",
+    "_score": 1.0,
+    "_source": {
+        "id": 1,
+        "created_at": "2022-01-19 14:55",
+        "name": "Dra. Milena Oliveira",
+        "address": "Rua Augusto da Rocha, 57\nVila Formosa\n91742837 Barbosa / PA",
+        "postcode": "71258221",
+        "phone_number": "+55 31 7701-2714",
+        "ssn": "16309584766"
+    }
+},
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "7",
+    "_score": 1.0,
+    "_source": {
+        "id": 2,
+        "created_at": "2022-01-19 14:55",
+        "name": "Heloísa Fogaça",
+        "address": "Lago Duarte, 275\nFloramar\n43023504 Oliveira de da Paz / RO",
+        "postcode": "35960570",
+        "phone_number": "+55 61 6989 9721",
+        "ssn": "13624589024"
+    }
+},
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "13",
+    "_score": 1.0,
+    "_source": {
+        "id": 3,
+        "created_at": "2022-01-19 14:56",
+        "name": "Eduardo Moura",
+        "address": "Estrada Alves, 17\nSerrano\n88055-432 da Cruz de Jesus / SC",
+        "postcode": "37882-864",
+        "phone_number": "+55 81 5827 8104",
+        "ssn": "86395217003"
+    }
+},
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "22",
+    "_score": 1.0,
+    "_source": {
+        "id": 4,
+        "created_at": "2022-01-19 14:56",
+        "name": "Breno Araújo",
+        "address": "Largo de Viana, 42\nVale Do Jatoba\n30512-945 Rezende / PI",
+        "postcode": "19199-588",
+        "phone_number": "81 4019-1733",
+        "ssn": "16089354775"
+    }
+},
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "3",
+    "_score": 1.0,
+    "_source": {
+        "id": 5,
+        "created_at": "2022-01-19 14:55",
+        "name": "Bruno Rezende",
+        "address": "Campo Emilly Lopes, 55\nAlto Caiçaras\n28573-094 Araújo / BA",
+        "postcode": "63979-414",
+        "phone_number": "(084) 0328-2915",
+        "ssn": "67382094529"
+    }
+},
+{
+    "_index": "inter-sample",
+    "_type": "doc",
+    "_id": "2",
+    "_score": 1.0,
+    "_source": {
+        "id": 6,
+        "created_at": "2022-01-19 14:55",
+        "name": "Sophie Melo",
+        "address": "Esplanada da Rosa, 195\nVila Mantiqueira\n06805-795 Farias / TO",
+        "postcode": "70487-062",
+        "phone_number": "+55 21 7547-9728",
+        "ssn": "63452079856"
+    }
+}
