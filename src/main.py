@@ -8,7 +8,7 @@ es = Elasticsearch()
 
 def main():
     print("Running sender...")
-    for x in range(9):
+    for x in range(999):
         execute_sender()
     print("Terminate.")
 
