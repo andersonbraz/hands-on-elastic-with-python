@@ -78,6 +78,11 @@ curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source1
 curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source2","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es2_","incrementing.field.name":"created_at"}}' http://localhost:8083/connectors
 ```
 
+
+```shell
+curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es2_","incrementing.field.name":"id"}}' http://localhost:8083/connectors
+```
+
 ## Check 
 
 ```shell

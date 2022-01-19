@@ -5,10 +5,10 @@ import uuid
 fake = Faker("pt_BR")
 
 
-def get_user():
+def generate_user(id):
 
     return {
-        "id": str(uuid.uuid4()),
+        "id": id,
         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "name": fake.name(),
         "address": fake.address(),
@@ -19,4 +19,4 @@ def get_user():
 
 
 if __name__ == "__main__":
-    print(get_user())
+    print(generate_user(1))

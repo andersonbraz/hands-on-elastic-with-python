@@ -1,13 +1,14 @@
 from elasticsearch import Elasticsearch
-from user_data import get_user
+from user_data import generate_user
 import json
+import time
 
 es = Elasticsearch()
 
 
 def main():
     print("Running sender...")
-    for x in range(999):
+    for x in range(9):
         execute_sender()
     print("Terminate.")
 
@@ -24,9 +25,11 @@ def cursor_total():
 
 def execute_sender():
 
-    user = get_user()
-    doc = json_serializer(user)
     offset = cursor_total() + 1
+    user = generate_user(offset)
+    doc = json_serializer(user)
+
+    time.sleep(5)
 
     res = es.index(index="inter-sample", id=offset, document=doc)
     print(res["result"])
