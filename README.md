@@ -1,6 +1,11 @@
 # HandsOn Elastic with Python
 
+## Create Folder Apps
 
+```shell
+mkdir -p ~/Apps
+cd ~/Apps
+```
 ## Clone project
 
 ```shell
@@ -41,7 +46,11 @@ pip install Faker
 ```shell
 python src/main.py
 ```
+## Check 
 
+```shell
+curl http://127.0.0.1:8083/connectors/elastic-source/status
+```
 ## References
 
 [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current)
@@ -56,35 +65,25 @@ python src/main.py
 
 ## Install Connector Elastic Source
 
-
 ```shell
 confluent-hub install dariobalinzo/kafka-connect-elasticsearch-source:1.5.0
 ```
 
-## Setting Connector Elastic Source
+## Install Connector FileStreamSink
 
 ```shell
-curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es_","incrementing.field.name":"@timestamp"}}' http://localhost:8083/connectors
+cd ~/Apps/confluent-7.0.0/
+cp ./share/filestream-connectors/connect-file-7.0.0-ce.jar share/java
 ```
-
-## Setting Connector Elastic Source using Id (type = Long)
+## Setting Connector Elastic Source 
 
 ```shell
-curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source1","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es1_","incrementing.field.name":"id"}}' http://localhost:8083/connectors
+curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es_","incrementing.field.name":"id"}}' http://localhost:8083/connectors
 ```
-## Setting Connector Elastic Source using Created_at (type = Date)
+
+## Setting Connector FileStreamSink
 
 ```shell
-curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source2","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es2_","incrementing.field.name":"created_at"}}' http://localhost:8083/connectors
+curl -X PUT -H "Content-Type: application/json" --data '{"connector.class": "FileStreamSink", "tasks.max" : 1, "file": "/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics": "es2_inter-sample"}' localhost:8083/connectors/file-stream-sink/config
 ```
 
-
-```shell
-curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source","config":{"connector.class":"com.github.dariobalinzo.ElasticSourceConnector","tasks.max":"1","es.host":"localhost","es.port":"9200","index.prefix":"inter-sample","topic.prefix":"es2_","incrementing.field.name":"id"}}' http://localhost:8083/connectors
-```
-
-## Check 
-
-```shell
-curl http://127.0.0.1:8083/connectors/elastic-source/status
-```
