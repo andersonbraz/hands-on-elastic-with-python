@@ -84,6 +84,6 @@ curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source"
 ## Setting Connector FileStreamSink
 
 ```shell
-curl -X PUT -H "Content-Type: application/json" --data '{"connector.class": "FileStreamSink", "tasks.max" : 1, "file": "/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics": "es2_inter-sample"}' localhost:8083/connectors/file-stream-sink/config
+curl -X PUT -H "Content-Type: application/json" --data '{"connector.class": "FileStreamSink", "tasks.max" : 1, "file": "/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics": "es_inter-sample"}' localhost:8083/connectors/file-stream-sink/config
 ```
 
