@@ -92,6 +92,6 @@ curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"File
 ## Setting Connector FileStreamSink
 
 ```shell
-curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics":"es_inter-sample","key.converter":"io.confluent.connect.avro.AvroConverter", "key.converter.schema.registry.url":"http://localhost:8082","value.converter":"io.confluent.connect.avro.AvroConverter","value.converter.schema.registry.url":"http://localhost:8082"}' localhost:8083/connectors/file-stream-sink/config
+curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/es_inter-sample.txt", "topics":"es_inter-sample","key.converter":"io.confluent.connect.avro.AvroConverter", "key.converter.schema.registry.url":"http://localhost:8082","value.converter":"io.confluent.connect.avro.AvroConverter","value.converter.schema.registry.url":"http://localhost:8082"}' localhost:8083/connectors/file-stream-sink/config
 ```
 
