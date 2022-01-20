@@ -46,23 +46,6 @@ pip install Faker
 ```shell
 python src/main.py
 ```
-## Check 
-
-```shell
-curl http://127.0.0.1:8083/connectors/elastic-source/status
-```
-## References
-
-[Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current)
-
-[Guide How To Add Documents To An Index In Elasticsearch](https://kb.objectrocket.com/elasticsearch/guide-how-to-add-documents-to-an-index-in-elasticsearch)
-
-[Python Elasticsearch Client](https://elasticsearch-py.readthedocs.io/en/v7.16.3/)
-
-## Utils
-
-[Download Insomnia](https://insomnia.res/download)
-
 ## Install Connector Elastic Source
 
 ```shell
@@ -95,4 +78,14 @@ curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"File
 ```shell
 curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/es_inter-sample.avro", "topics":"es_inter-sample","key.converter":"io.confluent.connect.avro.AvroConverter", "key.converter.schema.registry.url":"http://localhost:8082","value.converter":"io.confluent.connect.avro.AvroConverter","value.converter.schema.registry.url":"http://localhost:8082"}' localhost:8083/connectors/file-stream-sink/config
 ```
+## References
 
+[Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current)
+
+[Guide How To Add Documents To An Index In Elasticsearch](https://kb.objectrocket.com/elasticsearch/guide-how-to-add-documents-to-an-index-in-elasticsearch)
+
+[Python Elasticsearch Client](https://elasticsearch-py.readthedocs.io/en/v7.16.3/)
+
+## Utils
+
+[Download Insomnia](https://insomnia.res/download)
