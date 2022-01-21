@@ -74,10 +74,24 @@ curl -X POST -H "Content-Type:application/json" --data '{"name":"elastic-source"
 curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics":"es_inter-sample"}' localhost:8083/connectors/file-stream-sink/config
 ```
 
+```shell
+curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/test.sink.txt", "topics":"es_inter-sample"}' localhost:8083/connectors/file-stream-sink/config
+```
+
 
 ```shell
 curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"FileStreamSink","tasks.max":1,"file":"/Users/bi004609/Apps/confluent-7.0.0/es_inter-sample.avro", "topics":"es_inter-sample","key.converter":"io.confluent.connect.avro.AvroConverter", "key.converter.schema.registry.url":"http://localhost:8082","value.converter":"io.confluent.connect.avro.AvroConverter","value.converter.schema.registry.url":"http://localhost:8082"}' localhost:8083/connectors/file-stream-sink/config
 ```
+
+## Setting Connector S3-Sink
+
+```shell
+curl -X PUT -H "Content-Type: application/json" --data '{"name": "s3-sink","connector.class": "io.confluent.connect.s3.S3SinkConnector","topics": "es_inter-sample","flush.size": "1","s3.bucket.name": "mktd-dev-test-inter-sample","s3.region": "us-east-1","storage.class": "io.confluent.connect.s3.storage.S3Storage","format.class": "io.confluent.connect.s3.format.avro.AvroFormat"}' localhost:8083/connectors/s3-sink/config
+```
+```shell
+curl -X PUT -H "Content-Type: application/json" --data '{"name": "s3-sink","connector.class": "io.confluent.connect.s3.S3SinkConnector","topics": "es_inter-sample","flush.size": "1","s3.bucket.name": "mktd-dev-test-inter-sample","s3.region": "us-east-1","storage.class": "io.confluent.connect.s3.storage.S3Storage","format.class": "io.confluent.connect.s3.format.avro.AvroFormat","locale":"pt-BR","timezone":"America/Sao_Paulo"}' localhost:8083/connectors/s3-sink/config
+```
+
 ## References
 
 [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current)
@@ -89,3 +103,6 @@ curl -X PUT -H "Content-Type: application/json" --data '{"connector.class":"File
 ## Utils
 
 [Download Insomnia](https://insomnia.res/download)
+
+
+
